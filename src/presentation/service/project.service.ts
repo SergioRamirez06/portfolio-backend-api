@@ -1,3 +1,4 @@
+import { Project } from '@prisma/client';
 import {
   CustomError,
   PrismaError,
@@ -49,7 +50,7 @@ export class ProjectService {
         total,
         page,
         limit,
-        projects: projects.map(p => ProjectEntity.fromObject(p))
+        projects: projects.map((p: Project ) => ProjectEntity.fromObject(p))
       };
 
     } catch (error) {
