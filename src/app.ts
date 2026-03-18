@@ -9,9 +9,10 @@ import { Server } from './presentation/server';
 
 
 function main() {
+  const port = Number(process.env.PORT ?? 3000);
 
   const server = new Server({
-    port: envs.PORT || 3000,
+    port,
     routes: AppRoutes.routes,
   });
 
