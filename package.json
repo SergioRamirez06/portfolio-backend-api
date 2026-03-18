@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "dev": "tsnd --respawn --clear src/app.ts",
-    "build": "rimraf ./dist && tsc",
+    "build": "prisma generate && rimraf ./dist && tsc",
     "start": "node dist/app.js"
   },
   "keywords": [],
