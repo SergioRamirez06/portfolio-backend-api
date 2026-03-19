@@ -2,6 +2,7 @@ import express, { Router } from 'express';
 import path from 'path';
 import { SwaggerMiddleware } from './middleware/swagger.middleware';
 import helmet from 'helmet'
+import cors from 'cors'
 
 interface Options {
   port: number;
@@ -32,6 +33,7 @@ export class Server {
     
 
     //* Middlewares
+    this.app.use(cors())
     this.app.use(
         helmet({
           crossOriginResourcePolicy: { policy: "cross-origin" }
