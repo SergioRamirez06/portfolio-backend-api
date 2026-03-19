@@ -45,7 +45,7 @@ export class ContactService {
         try {
 
             const sent = await this.emailAdapter.sendEmail({
-                to: envs.MAILER_EMAIL,
+                to: "sergio200206mayo@gmail.com",
                 subject: `Nuevo mensaje de ${name} - ${email}`,
                 htmlBody
             });
